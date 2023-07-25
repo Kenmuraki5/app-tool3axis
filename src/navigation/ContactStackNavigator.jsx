@@ -10,16 +10,21 @@ import Contact from "../screens/Contact";
 const Stack = createStackNavigator();
 
 const ContactStackNavigator = () => {
-  const navigation = useNavigation(); // Initialize the useNavigation hook
+  const navigation = useNavigation();
+
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Contact" component={Contact} options={{
-        headerLeft: () => (
-          <TouchableOpacity style={{ margin: 10 }} onPress={() => navigation.toggleDrawer()}>
-            <Ionicons name="menu-outline" size={30} />
-          </TouchableOpacity>
-        ),
-      }} />
+      <Stack.Screen
+        name="Contact" // Rename this to something unique, e.g., "ContactScreen"
+        component={Contact}
+        options={{
+          headerLeft: () => (
+            <TouchableOpacity style={{ margin: 10 }} onPress={() => navigation.toggleDrawer()}>
+              <Ionicons name="menu-outline" size={30} />
+            </TouchableOpacity>
+          ),
+        }}
+      />
     </Stack.Navigator>
   );
 }

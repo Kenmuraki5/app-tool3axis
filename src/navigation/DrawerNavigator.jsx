@@ -10,14 +10,14 @@ const DrawerNavigator = () => {
   return (
     <Drawer.Navigator>
       <Drawer.Screen
-        name="HomeDrawer"
+        name="HomeDrawer" // Rename this to something unique, e.g., "HomeDrawerScreen"
         component={BottomTabNavigator}
-        options={{ headerShown: false }} // Hide the header for the drawer screen
+        options={{ headerShown: false }}
       />
       <Drawer.Screen
-        name="ContactDrawer"
+        name="ContactDrawer" // Rename this to something unique, e.g., "ContactDrawerScreen"
         component={ContactStackNavigator}
-        options={{ headerShown: false }} // Hide the header for the drawer screen
+        options={{ headerShown: false }}
       />
     </Drawer.Navigator>
   );

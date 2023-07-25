@@ -9,18 +9,25 @@ import About from "../screens/About";
 const Stack = createStackNavigator();
 
 const MainStackNavigator = () => {
-  const navigation = useNavigation(); // Initialize the useNavigation hook
+  const navigation = useNavigation();
 
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Home" component={Home} options={{
-        headerLeft: () => (
-          <TouchableOpacity style={{margin:10}} onPress={() => navigation.toggleDrawer()}>
-            <Ionicons name="menu-outline" size={30}  />
-          </TouchableOpacity>
-        ),
-      }} />
-      <Stack.Screen name="About" component={About} />
+      <Stack.Screen
+        name="Home" // Rename this to something unique, e.g., "HomeScreen"
+        component={Home}
+        options={{
+          headerLeft: () => (
+            <TouchableOpacity style={{ margin: 10 }} onPress={() => navigation.toggleDrawer()}>
+              <Ionicons name="menu-outline" size={30} />
+            </TouchableOpacity>
+          ),
+        }}
+      />
+      <Stack.Screen
+        name="About" // Rename this to something unique, e.g., "AboutScreen"
+        component={About}
+      />
     </Stack.Navigator>
   );
 }
