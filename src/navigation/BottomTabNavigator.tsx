@@ -11,7 +11,7 @@ const BottomTabNavigator = () => {
   return (
     <Tab.Navigator>
       <Tab.Screen 
-        name="Home"
+        name="HomeScreen"
         component={MainStackNavigator}
         options={{ 
           headerShown: false,
@@ -21,7 +21,7 @@ const BottomTabNavigator = () => {
         }} // Hide the header for this tab
       />
       <Tab.Screen
-        name="setting"
+        name="SettingsScreen"
         component={ContactStackNavigator}
         options={{ 
           headerShown: false,
