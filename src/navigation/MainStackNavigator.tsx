@@ -1,8 +1,8 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import { TouchableOpacity } from "react-native";
+import { Image, TouchableOpacity } from "react-native";
 import { Ionicons } from '@expo/vector-icons';
-import { useNavigation } from "@react-navigation/native"; // Import useNavigation hook
+import { useNavigation } from "@react-navigation/native";
 import { DrawerActions } from "@react-navigation/native"; // Import DrawerActions
 import Home from "../screens/Home";
 import About from "../screens/About";
@@ -15,7 +15,7 @@ const MainStackNavigator = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="Home" // Rename this to something unique, e.g., "HomeScreen"
+        name="Home"
         component={Home}
         options={{
           headerLeft: () => (
@@ -26,7 +26,7 @@ const MainStackNavigator = () => {
         }}
       />
       <Stack.Screen
-        name="About" // Rename this to something unique, e.g., "AboutScreen"
+        name="About"
         component={About}
       />
     </Stack.Navigator>
